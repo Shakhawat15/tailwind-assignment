@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DevsHunt an online learning platform</title>
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="./vendors/css/all.min.css">
+
+    <!-- Tailwind CSS File -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="font-Nunito bg-main min-h-screen bg-no-repeat bg-center bg-cover">
+    <!-- Star Login Section -->
+    <section id="login" class="flex justify-center text-center  py-10">
+        <div class="basis-[28%]">
+            <!-- Logo -->
+            <div class="bg-blue-400 justify-center flex py-4 rounded-t">
+                <img src="./images/logo.png" alt="DevsHunt" class="w-36 self-center">
+            </div>
+            <div class="bg-white p-9 mb-6 rounded-b">
+                <!-- Text -->
+                <div class="w-4/5 mx-auto m-0">
+                    <h4 class="text-lg font-bold text-slate-500 mb-2">Sign Up</h4>
+                    <p class="text-gray-400 text-base mb-9">Don't have an account? Create your account, it takes less
+                        than a minute.
+                    </p>
+                </div>
+                <!-- Form -->
+                <form action="#" method="post">
+                    <div class="mb-6">
+                        <label for="name" class="block text-left font-semibold text-slate-500 mb-2">
+                            Full name
+                        </label>
+                        <input type="text" required name="" id="name" placeholder="Enter your name"
+                            class="w-full border h-5 px-3 py-5 rounded focus:outline-none focus:border-slate-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-left font-semibold text-slate-500 mb-2">
+                            Email address
+                        </label>
+                        <input type="email" required name="" id="email" placeholder="Enter your email"
+                            class="w-full border h-5 px-3 py-5 rounded focus:outline-none focus:border-slate-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block text-left font-semibold text-slate-500 mb-2">
+                            Password
+                        </label>
+                        <div class="relative">
+                            <input type="password" required name="" id="password" placeholder="Enter your password"
+                                class="w-full border h-5 px-3 py-5 rounded focus:outline-none focus:border-slate-500">
+                            <i class="fa-solid fa-eye absolute top-0 right-0 bg-gray-300 p-[13px]"></i>
+                        </div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <input type="checkbox" required name="" id="remember">
+                        <label for="remember" class="ml-2 cursor-pointer text-slate-500  font-semibold">I accept <a href="#"
+                                class="text-gray-400">Terms and Conditions</a></label>
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit"
+                            class="cursor-pointer bg-blue-500 text-white rounded py-2 px-4 font-semibold text-lg transition hover:opacity-75 shadow-md shadow-blue-500/50">
+                            Sign Up
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <h3 class="text-gray-400 text-base mb-4">
+                Already have account?
+                <a href="login.html" class="ml-2 text-slate-500 font-bold">Log In</a>
+            </h3>
+
+        </div>
+    </section>
+    <!-- End Login Section -->
+
+    <!-- Start Footer Section -->
+    <footer>
+        <p class="text-center text-gray-400 text-sm pb-5">
+            &copy; 2022 DevsHunt | All Rights Reserved.
+        </p>
+    </footer>
+    <!-- End Footer Section -->
+
+</body>
+
+</html>
