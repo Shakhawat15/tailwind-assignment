@@ -8,6 +8,9 @@ module.exports = {
       backgroundImage: {
         'main': "url('./../images/bg-pattern-light.svg')",
       },
+      container: {
+        padding: '1rem',
+      },
     },
   },
   plugins: [],

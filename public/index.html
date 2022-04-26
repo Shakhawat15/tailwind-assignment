@@ -1,17 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard | DevsHunt an online learning platform</title>
 
-    <!-- Custom Style -->
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="./vendors/css/all.min.css">
+
+    <!-- Tailwind CSS File -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
-    <h2 class="text-4xl text-center bg-red-600">Dashboard</h2>
-    
+<body class="font-Nunito">
+
+
+    <!-- Start Main Section -->
+    <main class="grid grid-cols-12">
+        <!-- Start Sidebar Section -->
+        <section class="sidebar col-span-2 bg-gray-700">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="./images/logo2.png" alt="DevsHunt" class="w-24 m-0 mx-auto py-7">
+            </a>
+        </section>
+        <!-- End Sidebar Section -->
+
+        <!-- Start Content Section -->
+        <section class="content col-span-10 bg-gray-100">
+            <!-- Start Navbar -->
+            <nav class="bg-white shadow p-2.5 sticky top-0 z-50">
+                <div class="container mx-auto">
+                    <div class="flex justify-between">
+                        <div class="flex justify-center items-center">
+                            <div>
+                                <button class="text-xl text-gray-500">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="hidden md:block ml-5  relative">
+                                <span class="absolute top-2.5 left-4 text-slate-400">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="search" name="" id=""
+                                    class="transition w-full min-w-[300px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
+                                    placeholder="Search... ">
+                                <button
+                                    class="absolute top-0 -right-10 bg-blue-500 p-2 rounded-r text-white px-3 transition opacity-80 hover:opacity-100 shadow shadow-blue-500/50">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center pr-10 md:pr-0">
+                            <ul class="list-none">
+                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                    <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                        <div class="flex justify-center items-center">
+                                            <img src="./images/us.jpg" alt="USA" class="w-5 mr-2">
+                                            <span class="text-sm mr-2">
+                                                English
+                                            </span>
+                                            <i class="fa-solid fa-angle-down text-xs"></i>
+                                        </div>
+                                    </a>
+                                </li> <!-- End Language Options -->
+                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                    <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                        <span
+                                            class="absolute -top-0.5 -right-0.5 bg-red-500 rounded-full w-2 h-2 text-white">
+                                        </span>
+                                        <i class="fa-solid fa-bell"></i>
+                                    </a>
+                                </li> <!-- End Notification  -->
+                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                    <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                        <i class="fa-solid fa-grip"></i>
+                                    </a>
+                                </li> <!-- End Social Icon Options  -->
+                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                    <span
+                                        class="navbar-toggle text-xl text-gray-500 group-hover:opacity-75 cursor-pointer">
+                                        <i class="fa-solid fa-gear" id="toggle-icon"></i>
+                                    </span>
+                                </li> <!-- End Settings Options  -->
+                            </ul>
+                            <!-- User Icon -->
+                            <div class="bg-slate-100 px-2 rounded cursor-pointer mx-3 group flex justify-center items-center">
+                                <img src="./images/avatar-1.jpg" alt="Avatar" class="w-10 h-10 mr-2 rounded">
+                                <div class="text-gray-500">
+                                    <h5 class="text-base font-semibold">Dominic Keller</h5>
+                                    <span class="text-sm font-light">Founder</span>
+                                </div>
+                            </div>
+                        </div >
+                    </div>
+                    <!-- Start Settings Navbar -->
+                    <div
+                        class="setting-navbar w-72 hidden min-h-screen bg-white absolute right-0 top-0 text-left overflow-y-auto shadow">
+                        <div class="bg-gray-800 flex justify-between items-center text-white p-6">
+                            <h5 class="text-base font-semibold">Settings</h5>
+                            <span
+                                class="navbar-toggle bg-gray-700 w-6 h-6 rounded-full text-center pt-0.5 cursor-pointer">
+                                <i class="fa-solid fa-xmark"></i>
+                            </span>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-6">
+                            <!-- Dark and Light -->
+                            <h5 class="text-base text-gray-500 font-semibold border-b pt-6 pb-2 mb-5">Color Scheme</h5>
+                            <div class="text-sm text-gray-500 font-semibold mb-2.5">
+                                <input type="checkbox" name="color" id="light" checked>
+                                <label for="light" class="ml-1">Light Mode</label>
+                            </div>
+                            <div class="text-sm text-gray-500 font-semibold">
+                                <input type="checkbox" name="color" id="dark">
+                                <label for="dark" class="ml-1">Dark Mode</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Settings Navbar -->
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="container mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem ullam expedita debitis amet
+                dicta culpa harum dignissimos, ad labore iure deleniti est distinctio iste voluptatem veniam ex eveniet?
+                Porro.
+            </div>
+        </section>
+        <!-- End Content Section -->
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Start Script -->
+    <!-- jQuery File -->
+    <script src="./vendors/js/jquery-3.6.0.min.js"></script>
+    <!-- Main Js  -->
+    <script src="./js/main.js"></script>
+
 </body>
+
 </html>
