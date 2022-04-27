@@ -62,10 +62,11 @@
                                 </button>
                             </div>
                         </div>
+                        <!-- Right Menu -->
                         <div class="flex justify-center items-center pr-10 md:pr-0">
                             <ul class="list-none">
                                 <li class="inline-block mx-2 lg:mx-3 relative group">
-                                    <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                    <a href="#" class="text-xl text-gray-500 opacity-75 focus:opacity-100 language">
                                         <div class="flex justify-center items-center">
                                             <img src="./images/us.jpg" alt="USA" class="w-5 mr-2">
                                             <span class="text-sm mr-2">
@@ -74,73 +75,323 @@
                                             <i class="fa-solid fa-angle-down text-xs"></i>
                                         </div>
                                     </a>
+                                    <!-- Language Dropdown Menu -->
+                                    <div
+                                        class="language-navbar w-40 shadow-md bg-white absolute -right-4 top-[45px] text-left overflow-y-auto rounded py-1">
+                                        <div>
+                                            <!-- Item -->
+                                            <a href="#" class="block w-full hover:bg-gray-100 py-2 px-5">
+                                                <div class="flex justify-start items-center">
+                                                    <img src="./images/germany.jpg" alt="German" class="w-5 mr-2">
+                                                    <span class="text-sm mr-2">
+                                                        German
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <!-- Item -->
+                                            <a href="#" class="block w-full hover:bg-gray-100 py-2 px-5">
+                                                <div class="flex justify-start items-center">
+                                                    <img src="./images/italy.jpg" alt="Italy" class="w-5 mr-2">
+                                                    <span class="text-sm mr-2">
+                                                        Italian
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <!-- Item -->
+                                            <a href="#" class="block w-full hover:bg-gray-100 py-2 px-5">
+                                                <div class="flex justify-start items-center">
+                                                    <img src="./images/spain.jpg" alt="Spain" class="w-5 mr-2">
+                                                    <span class="text-sm mr-2">
+                                                        Spanish
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <!-- Item -->
+                                            <a href="#" class="block w-full hover:bg-gray-100 py-2 px-5">
+                                                <div class="flex justify-start items-center">
+                                                    <img src="./images/russia.jpg" alt="Russia" class="w-5 mr-2">
+                                                    <span class="text-sm mr-2">
+                                                        Russian
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li> <!-- End Language Options -->
                                 <li class="inline-block mx-2 lg:mx-3 relative group">
-                                    <a href="#" role="button" class="text-xl text-gray-500 group-hover:opacity-75 notification">
+                                    <a href="#" role="button"
+                                        class="text-xl opacity-75 focus:opacity-100 text-gray-500  notification">
                                         <span
                                             class="absolute -top-0.5 -right-0.5 bg-red-500 rounded-full w-2 h-2 text-white">
                                         </span>
                                         <i class="fa-solid fa-bell"></i>
                                     </a>
+                                    <!-- Notification Dropdown Menu -->
                                     <div
-                                        class="notification-navbar w-72 shadow-md bg-white absolute -right-4 top-[48.5px] text-left overflow-y-auto rounded">
-                                        <div class="flex justify-between items-center p-6">
-                                            <h5 class="text-base font-semibold">Notification</h5>
-                                            <span
-                                                class="notification text-xs cursor-pointer">
+                                        class="notification-navbar w-80 shadow-md bg-white absolute -right-4 top-[48.5px] text-left overflow-y-auto rounded py-1">
+                                        <!-- Header -->
+                                        <div class="flex justify-between items-center py-4 px-6">
+                                            <h5 class="text-base text-gray-600 font-semibold">Notification</h5>
+                                            <span class="notification text-xs cursor-pointer">
                                                 Clear all
                                             </span>
-                                        </div> 
+                                        </div>
+                                        <!-- Content -->
+                                        <div class="px-6 h-[330px] overflow-y-auto">
+                                            <!-- Today Message -->
+                                            <h5 class="text-sm text-gray-300 mb-2.5">Today</h5>
+                                            <!-- Item -->
+                                            <a href="#" class="bg-gray-100 mb-2.5 block rounded relative">
+                                                <span class="absolute top-1 right-2 text-sm text-gray-400">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                                <div class="p-3.5 flex items-center">
+                                                    <div
+                                                        class="bg-blue-500 text-white w-9 h-9 rounded-full text-center pt-3 text-xs mr-2.5">
+                                                        <i class="fa-solid fa-message"></i>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="flex items-center">
+                                                            <h5
+                                                                class="mr-3 font-semibold text-sm text-gray-600 hover:text-gray-800">
+                                                                Datacorp</h5>
+                                                            <span class="text-xs text-gray-400">1 min ago</span>
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.....
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- Item -->
+                                            <a href="#" class="border mb-2.5 block rounded relative">
+                                                <span class="absolute top-1 right-2 text-sm text-gray-400">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                                <div class="p-3.5 flex items-center">
+                                                    <div
+                                                        class="bg-blue-500 text-white w-9 h-9 rounded-full text-center pt-3 text-xs mr-2.5">
+                                                        <i class="fa-solid fa-user-plus"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="flex items-center">
+                                                            <h5
+                                                                class="mr-3 font-semibold text-sm text-gray-600 hover:text-gray-800">
+                                                                Admin</h5>
+                                                            <span class="text-xs text-gray-400">1 hours ago</span>
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.....
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- Yesterday Message -->
+                                            <h5 class="text-sm text-gray-300 mb-2.5">Yesterday</h5>
+                                            <!-- Item -->
+                                            <a href="#" class="border mb-2.5 block rounded relative">
+                                                <span class="absolute top-1 right-2 text-sm text-gray-400">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                                <div class="p-3.5 flex items-center">
+                                                    <img src="./images/avatar-1.jpg" alt="Avatar"
+                                                        class="w-9 h-9 rounded-full mr-2.5">
+                                                    <div class="">
+                                                        <div class="flex items-center">
+                                                            <h5
+                                                                class="mr-3 font-semibold text-sm text-gray-600 hover:text-gray-800">
+                                                                Cristina Pride</h5>
+                                                            <span class="text-xs text-gray-400">1 Day ago</span>
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.....
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- 30, December 2021 Message -->
+                                            <h5 class="text-sm text-gray-300 mb-2.5">30 Dec 2021</h5>
+                                            <!-- Item -->
+                                            <a href="#" class="bg-gray-100 mb-2.5 block rounded relative">
+                                                <span class="absolute top-1 right-2 text-sm text-gray-400">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                                <div class="p-3.5 flex items-center">
+                                                    <div
+                                                        class="bg-blue-500 text-white w-9 h-9 rounded-full text-center pt-3 text-xs mr-2.5">
+                                                        <i class="fa-solid fa-message"></i>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="flex items-center">
+                                                            <h5
+                                                                class="mr-3 font-semibold text-sm text-gray-600 hover:text-gray-800">
+                                                                Datacorp</h5>
+                                                            <span class="text-xs text-gray-400">1 min ago</span>
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.....
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- Item -->
+                                            <a href="#" class="border mb-2.5 block rounded relative">
+                                                <span class="absolute top-1 right-2 text-sm text-gray-400">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                                <div class="p-3.5 flex items-center">
+                                                    <img src="./images/avatar-1.jpg" alt="Avatar"
+                                                        class="w-9 h-9 rounded-full mr-2.5">
+                                                    <div class="">
+                                                        <div class="flex items-center">
+                                                            <h5
+                                                                class="mr-3 font-semibold text-sm text-gray-600 hover:text-gray-800">
+                                                                Cristina Pride</h5>
+                                                            <span class="text-xs text-gray-400">1 Day ago</span>
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.....
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- Spinner -->
+                                            <div class="text-center text-xl text-gray-400">
+                                                <i class="fa-solid fa-spinner mb-2.5 animate-spin"></i>
+                                            </div>
+                                        </div>
+                                        <!-- Footer -->
+                                        <a href="#"
+                                            class="block w-full py-3 px-6 text-base text-center border-t text-blue-600 hover:bg-gray-100">
+                                            View All
+                                        </a>
                                     </div>
                                 </li> <!-- End Notification  -->
                                 <li class="inline-block mx-2 lg:mx-3 relative group">
-                                    <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                    <a href="#" role="button"
+                                        class="text-xl text-gray-500 opacity-75 focus:opacity-100 social">
                                         <i class="fa-solid fa-grip"></i>
                                     </a>
+                                    <!-- Social Icon Dropdown Menu -->
+                                    <div
+                                        class="social-navbar w-80 shadow-md bg-white absolute -right-4 top-[49px] text-left overflow-y-auto rounded py-1">
+                                        <div class="p-3 flex flex-wrap gap-5 justify-center items-center">
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/slack.png" alt="Slack" class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">Slack</span>
+                                            </div>
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/github.png" alt="Github" class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">Github</span>
+                                            </div>
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/dribbble.png" alt="Dribble" class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">Dribble</span>
+                                            </div>
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/bitbucket.png" alt="Bitbucket"
+                                                    class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">Bitbucket</span>
+                                            </div>
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/dropbox.png" alt="Dropbox" class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">Dropbox</span>
+                                            </div>
+                                            <!-- Item -->
+                                            <div class="basis-[28%] text-center py-4 hover:bg-gray-100 rounded">
+                                                <img src="./images/g-suite.png" alt="G-suite" class="h-6 m-0 mx-auto">
+                                                <span class="mt-2.5 block text-gray-500">G suite</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li> <!-- End Social Icon Options  -->
                                 <li class="inline-block mx-2 lg:mx-3 relative group">
                                     <span
-                                        class="navbar-toggle text-xl text-gray-500 group-hover:opacity-75 cursor-pointer">
+                                        class="navbar-toggle text-xl text-gray-500 opacity-75 focus:opacity-100 cursor-pointer">
                                         <i class="fa-solid fa-gear" id="toggle-icon"></i>
                                     </span>
                                 </li> <!-- End Settings Options  -->
                             </ul>
+                            <!-- Start Settings Navbar -->
+                            <div
+                                class="setting-navbar w-72 hidden min-h-screen bg-white absolute right-0 top-0 text-left overflow-y-auto shadow">
+                                <div class="bg-gray-800 flex justify-between items-center text-white p-6">
+                                    <h5 class="text-base font-semibold">Settings</h5>
+                                    <span
+                                        class="navbar-toggle bg-gray-700 w-6 h-6 rounded-full text-center pt-0.5 cursor-pointer">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                                <!-- Content Section -->
+                                <div class="p-6">
+                                    <!-- Dark and Light -->
+                                    <h5 class="text-base text-gray-500 font-semibold border-b pt-6 pb-2 mb-5">Color
+                                        Scheme</h5>
+                                    <div class="text-sm text-gray-500 font-semibold mb-2.5">
+                                        <input type="checkbox" name="color" id="light" checked>
+                                        <label for="light" class="ml-1">Light Mode</label>
+                                    </div>
+                                    <div class="text-sm text-gray-500 font-semibold">
+                                        <input type="checkbox" name="color" id="dark">
+                                        <label for="dark" class="ml-1">Dark Mode</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Settings Navbar -->
                             <!-- User Icon -->
                             <div
-                                class="bg-slate-100 px-2 rounded cursor-pointer mx-3 group flex justify-center items-center">
+                                class="user bg-slate-100 px-2 rounded cursor-pointer mx-3 group flex justify-center items-center">
                                 <img src="./images/avatar-1.jpg" alt="Avatar" class="w-10 h-10 mr-2 rounded">
                                 <div class="text-gray-500">
                                     <h5 class="text-base font-semibold">Dominic Keller</h5>
                                     <span class="text-sm font-light">Founder</span>
                                 </div>
                             </div>
+                            <!-- Start User Navbar -->
+                            <div
+                                class="user-navbar w-[175px] shadow-md bg-white absolute right-9 top-[69px] text-left overflow-y-auto rounded py-1">
+                                <div class="text-xs font-bold px-5 py-4 text-gray-500">
+                                    <h6>Welcome !</h6>
+                                </div>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100">
+                                    <div class="px-5 py-2 flex items-center text-gray-500">
+                                        <i class="fa-solid fa-user-circle text-xs mr-2"></i>
+                                        <span class="text-sm font-semibold">My Account</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100">
+                                    <div class="px-5 py-2 flex items-center text-gray-500">
+                                        <i class="fa-solid fa-gear text-xs mr-2"></i>
+                                        <span class="text-sm font-semibold">Settings</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100">
+                                    <div class="px-5 py-2 flex items-center text-gray-500">
+                                        <i class="fa-solid fa-life-ring text-xs mr-2"></i>
+                                        <span class="text-sm font-semibold">Support</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100">
+                                    <div class="px-5 py-2 flex items-center text-gray-500">
+                                        <i class="fa-solid fa-lock text-xs mr-2"></i>
+                                        <span class="text-sm font-semibold">Lock Screen</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100">
+                                    <div class="px-5 py-2 flex items-center text-gray-500">
+                                        <i class="fa-solid fa-arrow-right-from-bracket text-xs mr-2"></i>
+                                        <span class="text-sm font-semibold">Logout</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- End User Navbar -->
                         </div>
                     </div>
-                    <!-- Start Settings Navbar -->
-                    <div
-                        class="setting-navbar w-72 hidden min-h-screen bg-white absolute right-0 top-0 text-left overflow-y-auto shadow">
-                        <div class="bg-gray-800 flex justify-between items-center text-white p-6">
-                            <h5 class="text-base font-semibold">Settings</h5>
-                            <span
-                                class="navbar-toggle bg-gray-700 w-6 h-6 rounded-full text-center pt-0.5 cursor-pointer">
-                                <i class="fa-solid fa-xmark"></i>
-                            </span>
-                        </div>
-                        <!-- Content Section -->
-                        <div class="p-6">
-                            <!-- Dark and Light -->
-                            <h5 class="text-base text-gray-500 font-semibold border-b pt-6 pb-2 mb-5">Color Scheme</h5>
-                            <div class="text-sm text-gray-500 font-semibold mb-2.5">
-                                <input type="checkbox" name="color" id="light" checked>
-                                <label for="light" class="ml-1">Light Mode</label>
-                            </div>
-                            <div class="text-sm text-gray-500 font-semibold">
-                                <input type="checkbox" name="color" id="dark">
-                                <label for="dark" class="ml-1">Dark Mode</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Settings Navbar -->
                 </div>
             </nav>
             <!-- End Navbar -->

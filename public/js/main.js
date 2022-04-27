@@ -53,10 +53,14 @@ $(document).ready(function () {
     /************************************* 
      * Setting Navbar *
      ************************************/
-     $('.setting-navbar').removeClass('hidden');
+    $('.setting-navbar').removeClass('hidden');
     $('.setting-navbar').hide();
     $('.navbar-toggle').on('click', function () {
         $('.setting-navbar').toggle('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -74,10 +78,14 @@ $(document).ready(function () {
     /************************************* 
      * Notification Navbar *
      ************************************/
-     $('.notification-navbar').removeClass('hidden');
+    $('.notification-navbar').removeClass('hidden');
     $('.notification-navbar').hide();
     $('.notification').on('click', function () {
         $('.notification-navbar').slideToggle('slow');
+        $('.language-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -89,6 +97,81 @@ $(document).ready(function () {
     });
 
     $('.notification-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * Language Navbar *
+     ************************************/
+    $('.language-navbar').removeClass('hidden');
+    $('.language-navbar').hide();
+    $('.language').on('click', function () {
+        $('.language-navbar').slideToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.language-navbar').slideUp('slow');
+    });
+
+    $('.language').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.language-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * Social Icon Navbar *
+     ************************************/
+    $('.social-navbar').removeClass('hidden');
+    $('.social-navbar').hide();
+    $('.social').on('click', function () {
+        $('.social-navbar').slideToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.social-navbar').slideUp('slow');
+    });
+
+    $('.social').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.social-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * User Navbar *
+     ************************************/
+    $('.user-navbar').removeClass('hidden');
+    $('.user-navbar').hide();
+    $('.user').on('click', function () {
+        $('.user-navbar').slideToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $('.user').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.user-navbar').on('click', function (event) {
         event.stopPropagation();
     });
 });
