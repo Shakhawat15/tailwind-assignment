@@ -70,4 +70,25 @@ $(document).ready(function () {
     $('.setting-navbar').on('click', function (event) {
         event.stopPropagation();
     });
+
+    /************************************* 
+     * Notification Navbar *
+     ************************************/
+     $('.notification-navbar').removeClass('hidden');
+    $('.notification-navbar').hide();
+    $('.notification').on('click', function () {
+        $('.notification-navbar').slideToggle('slow');
+    });
+
+    $(window).click(function () {
+        $('.notification-navbar').slideUp('slow');
+    });
+
+    $('.notification').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.notification-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
 });
