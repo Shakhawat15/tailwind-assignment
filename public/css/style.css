@@ -773,16 +773,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.25rem;
 }
 
+.mr-0 {
+  margin-right: 0px;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
 .mb-9 {
   margin-bottom: 2.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .mb-4 {
@@ -921,8 +925,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-width: 70px;
 }
 
-.min-w-\[300px\] {
-  min-width: 300px;
+.min-w-\[250px\] {
+  min-width: 250px;
 }
 
 .basis-\[28\%\] {
@@ -1052,19 +1056,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }
 
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1233,10 +1232,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-12 {
   padding-left: 3rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
 }
 
 .pt-3 {
@@ -1470,6 +1465,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
+  .md\:inline-block {
+    display: inline-block;
+  }
+
   .md\:basis-3\/6 {
     flex-basis: 50%;
   }
@@ -1478,16 +1477,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-
-  .md\:pr-0 {
-    padding-right: 0px;
-  }
 }
 
 @media (min-width: 1024px) {
   .lg\:mx-3 {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:basis-\[30\%\] {

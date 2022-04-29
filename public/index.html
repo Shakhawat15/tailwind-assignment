@@ -26,7 +26,7 @@
 <body class="font-Nunito">
 
     <!-- Start Sidebar Section -->
-    <aside class="sidebar w-[260px] bg-slate-800 h-full fixed top-0 left-0">
+    <aside class="sidebar w-[260px] bg-slate-700 h-full fixed top-0 left-0">
         <!-- Logo -->
         <a href="index.html" class="flex items-center h-[60px] w-full">
             <div class="h-[50px] min-w-[70px] mt-4">
@@ -35,14 +35,17 @@
             <span class="text-lg text-white font-semibold logo-name transition">DevsHunt</span>
         </a>
         <ul class="nav-links overflow-visible list-none h-full pt-7 text-gray-400">
+            <!-- Single Menu -->
             <li class="transition group">
                 <a href="#" class="flex items-center group-hover:text-gray-100 main">
                     <i class="fa-solid fa-house h-[40px] min-w-[70px] mt-4 text-center text-lg"></i>
                     <span class="text-lg link-name">Dashboard</span>
                 </a>
             </li>
+            <!-- Dropdown Menu -->
             <li class="relative group">
-                <div class="icon-link flex justify-between items-center group-hover:text-gray-100 transition w-[260px] pr-7">
+                <div
+                    class="icon-link flex justify-between items-center group-hover:text-gray-100 transition w-[260px] pr-7">
                     <a href="#" class="flex items-center main">
                         <i class="fa-solid fa-briefcase h-[40px] min-w-[70px] mt-4 text-center text-lg"></i>
                         <span class="text-lg link-name">Projects</span>
@@ -87,7 +90,7 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
                                 <input type="search" name="" id=""
-                                    class="transition w-full min-w-[300px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
+                                    class="transition w-full min-w-[250px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
                                     placeholder="Search... ">
                                 <button
                                     class="absolute top-0 -right-10 bg-blue-500 p-2 rounded-r text-white px-3 transition opacity-80 hover:opacity-100 shadow shadow-blue-500/50">
@@ -96,7 +99,7 @@
                             </div>
                         </div>
                         <!-- Right Menu -->
-                        <div class="flex justify-center items-center pr-10 md:pr-0">
+                        <div class="flex justify-center items-center">
                             <ul class="list-none">
                                 <li class="inline-block mx-2 lg:mx-3 relative group">
                                     <a href="#" class="text-xl text-gray-500 opacity-75 focus:opacity-100 language">
@@ -300,7 +303,7 @@
                                         </a>
                                     </div>
                                 </li> <!-- End Notification  -->
-                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
                                     <a href="#" role="button"
                                         class="text-xl text-gray-500 opacity-75 focus:opacity-100 social">
                                         <i class="fa-solid fa-grip"></i>
@@ -378,9 +381,9 @@
                             <!-- End Settings Navbar -->
                             <!-- User Icon -->
                             <div
-                                class="user bg-slate-100 px-2 rounded cursor-pointer mx-3 group flex justify-center items-center">
-                                <img src="./images/avatar-1.jpg" alt="Avatar" class="w-10 h-10 mr-2 rounded">
-                                <div class="text-gray-500">
+                                class="user bg-slate-100 px-2 rounded cursor-pointer mx-3 mr-0 group flex justify-center items-center">
+                                <img src="./images/avatar-1.jpg" alt="Avatar" class="w-10 h-10 rounded">
+                                <div class="text-gray-500 hidden lg:block ml-2">
                                     <h5 class="text-base font-semibold">Dominic Keller</h5>
                                     <span class="text-sm font-light">Founder</span>
                                 </div>
@@ -432,14 +435,14 @@
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
-            <div class="container mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem ullam expedita debitis amet
-                dicta culpa harum dignissimos, ad labore iure deleniti est distinctio iste voluptatem veniam ex eveniet?
-                Porro.
-            </div>
         </header>
-        <!-- End Content Section -->
+        <!-- End Navbar -->
+        <!-- Start Content Section -->
+        <div class="container mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem ullam expedita debitis amet
+            dicta culpa harum dignissimos, ad labore iure deleniti est distinctio iste voluptatem veniam ex eveniet?
+            Porro.
+        </div>
     </main>
     <!-- End Main Section -->
 
