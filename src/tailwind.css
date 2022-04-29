@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    /* Sidebar */
+    .sidebar {
+        z-index: 100;
+        transition: .5s;
+    }
+
+    .sidebar.close {
+        width: 70px;
+    }
+
+    .sidebar .nav-links li.showMenu i.arrow {
+        transform: rotate(90deg);
+    }
+    .sidebar.close .nav-links i.arrow {
+        display: none;
+    }
+
+    .sidebar .nav-links li .sub-menu a {
+        white-space: nowrap;
+    }
+
+    .sidebar .nav-links li.showMenu .sub-menu {
+        display: block;
+    }
+
+    .sidebar.close .nav-links li .sub-menu {
+        position: absolute;
+        left: 100%;
+        top: -10px;
+        margin-top: 0;
+        padding: 10px 20px;
+        border-radius: 0 6px 6px 0;
+        transition: all .4s ease;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.close .logo-name {
+        opacity: 0;
+        pointer-events: none;
+        transition-delay: 0;
+    }
+
+    .sidebar.close .nav-links li:hover .sub-menu {
+        top: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sidebar.close .nav-links li .sub-menu .link-name {
+        display: block;
+    }
+
+    .sidebar.close .nav-links li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.close~.main-section {
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+
+
+
+    /* Main Section */
+    .main-section {
+        transition: .5s;
+        width: calc(100% - 260px);
+    }
+}
