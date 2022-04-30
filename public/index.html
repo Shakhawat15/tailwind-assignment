@@ -26,7 +26,7 @@
 <body class="font-Nunito">
 
     <!-- Start Sidebar Section -->
-    <aside class="sidebar w-[260px] bg-slate-700 h-full fixed top-0 left-0">
+    <aside class="sidebar close  w-[260px] bg-slate-700 h-full fixed top-0 left-0">
         <!-- Logo -->
         <a href="index.html" class="flex items-center h-[60px] w-full">
             <div class="h-[50px] min-w-[70px] mt-4">
@@ -43,15 +43,12 @@
                 </a>
             </li>
             <!-- Dropdown Menu -->
-            <li class="relative group">
-                <div
-                    class="icon-link flex justify-between items-center group-hover:text-gray-100 transition w-[260px] pr-7">
-                    <a href="#" class="flex items-center main">
-                        <i class="fa-solid fa-briefcase h-[40px] min-w-[70px] mt-4 text-center text-lg"></i>
-                        <span class="text-lg link-name">Projects</span>
-                    </a>
+            <li class="transition relative group">
+                <a href="#" class="flex items-center group-hover:text-gray-100 main">
+                    <i class="fa-solid fa-briefcase h-[40px] min-w-[70px] mt-4 text-center text-lg"></i>
+                    <span class="text-lg link-name pr-10">Projects</span>
                     <i class="fa-solid fa-angle-right arrow cursor-pointer transition"></i>
-                </div>
+                </a>
                 <!-- Sub Menu -->
                 <ul class="list-none transition sub-menu py-1.5 pl-[68px] pr-3.5 hidden">
                     <li class="py-1 hover:text-gray-100 transition">
@@ -79,18 +76,45 @@
                 <!-- container mx-auto -->
                 <div class="px-5">
                     <div class="flex justify-between">
+                        <!-- left Menu -->
                         <div class="flex justify-center items-center">
-                            <div>
+                            <ul class="list-none">
+                                <li class="hidden sm:inline-block mx-2 lg:mx-3 relative group">
+                                    <a href="#" role="button"
+                                        class="text-xl text-gray-500 opacity-75 focus:opacity-100">
+                                        <i class="fa-solid fa-bars sidebar-menu"></i>
+                                    </a>
+                                </li> <!-- End Sidebar Menu Icon Options  -->
+                                <li class="lg:hidden inline-block mx-2 lg:mx-3 relative group">
+                                    <a href="#" role="button"
+                                        class="text-xl text-gray-500 opacity-75 focus:opacity-100 search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a>
+                                    <!-- End Sidebar Menu Icon Options  -->
+                                    <div
+                                        class="search-navbar w-72 md:w-80 shadow-md bg-white absolute lef-0 top-[45px] rounded">
+                                        <div class="p-2.5 relative">
+                                            <span class="absolute top-5 left-5 text-slate-400">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </span>
+                                            <input type="search" name="" id=""
+                                                class="transition w-full min-w-[250px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
+                                                placeholder="Search... ">
+                                        </div>
+                                    </div>
+                                </li> <!-- End Search Menu Icon Options  -->
+                            </ul>
+                            <!-- <div>
                                 <button class="text-xl text-gray-500">
                                     <i class="fa-solid fa-bars sidebar-menu"></i>
                                 </button>
-                            </div>
-                            <div class="hidden md:block ml-5  relative">
+                            </div> -->
+                            <div class="hidden lg:block ml-5  relative">
                                 <span class="absolute top-2.5 left-4 text-slate-400">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
                                 <input type="search" name="" id=""
-                                    class="transition w-full min-w-[250px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
+                                    class="transition w-full min-w-[300px] rounded p-2.5 pl-12 bg-slate-100 text-sm focus:outline-none"
                                     placeholder="Search... ">
                                 <button
                                     class="absolute top-0 -right-10 bg-blue-500 p-2 rounded-r text-white px-3 transition opacity-80 hover:opacity-100 shadow shadow-blue-500/50">
@@ -101,7 +125,7 @@
                         <!-- Right Menu -->
                         <div class="flex justify-center items-center">
                             <ul class="list-none">
-                                <li class="inline-block mx-2 lg:mx-3 relative group">
+                                <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
                                     <a href="#" class="text-xl text-gray-500 opacity-75 focus:opacity-100 language">
                                         <div class="flex justify-center items-center">
                                             <img src="./images/us.jpg" alt="USA" class="w-5 mr-2">
@@ -383,7 +407,7 @@
                             <div
                                 class="user bg-slate-100 px-2 rounded cursor-pointer mx-3 mr-0 group flex justify-center items-center">
                                 <img src="./images/avatar-1.jpg" alt="Avatar" class="w-10 h-10 rounded">
-                                <div class="text-gray-500 hidden lg:block ml-2">
+                                <div class="text-gray-500 hidden xl:block ml-2">
                                     <h5 class="text-base font-semibold">Dominic Keller</h5>
                                     <span class="text-sm font-light">Founder</span>
                                 </div>

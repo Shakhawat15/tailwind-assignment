@@ -535,6 +535,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: block;
 }
 
+.sidebar.close .logo-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .sidebar.close .nav-links li .sub-menu {
   position: absolute;
   left: 100%;
@@ -542,7 +547,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0;
   width: calc(260px - 70px);
   padding: 10px 20px;
-  /* border-radius: 0 6px 6px 0; */
   transition: all .4s ease;
   display: block;
   opacity: 0;
@@ -550,14 +554,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: rgb(15, 23, 42);
 }
 
-.sidebar.close .logo-name {
-  opacity: 0;
-  pointer-events: none;
-  transition-delay: 0;
-}
-
 .sidebar.close .nav-links li:hover .sub-menu {
-  /* top: 56px; */
   opacity: 1;
   pointer-events: auto;
 }
@@ -566,16 +563,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #3B82F6;
   padding-right: 0;
   width: 260px;
-  /* height: 50px; */
 }
 
 .sidebar.close .nav-links li:hover a .link-name {
   padding-left: 10px;
 }
 
-/* .sidebar.close .nav-links li .sub-menu .link-name {
-        display: block;
-    } */
+.sidebar.close .nav-links li .link-name {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .sidebar.close .nav-links li a .link-name {
   opacity: 0;
@@ -704,6 +701,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-\[69px\] {
   top: 69px;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.left-5 {
+  left: 1.25rem;
 }
 
 .z-50 {
@@ -921,12 +926,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 80%;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
 .min-w-\[70px\] {
   min-width: 70px;
 }
 
+.min-w-\[300px\] {
+  min-width: 300px;
+}
+
+.min-w-\[0px\] {
+  min-width: 0px;
+}
+
 .min-w-\[250px\] {
   min-width: 250px;
+}
+
+.min-w-\[200px\] {
+  min-width: 200px;
 }
 
 .basis-\[28\%\] {
@@ -1106,6 +1131,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-main {
   background-image: url('./../images/bg-pattern-light.svg');
 }
@@ -1148,6 +1178,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-\[13px\] {
   padding: 13px;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .py-1\.5 {
@@ -1212,6 +1246,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .pr-7 {
@@ -1460,13 +1498,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
-  .md\:block {
-    display: block;
+@media (min-width: 640px) {
+  .sm\:inline-block {
+    display: inline-block;
   }
+}
 
+@media (min-width: 768px) {
   .md\:inline-block {
     display: inline-block;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
   }
 
   .md\:basis-3\/6 {
@@ -1489,6 +1533,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:basis-\[30\%\] {
     flex-basis: 30%;
   }
@@ -1496,5 +1544,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
   }
 }

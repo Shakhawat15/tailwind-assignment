@@ -198,4 +198,30 @@ $(document).ready(function () {
     $('.user-navbar').on('click', function (event) {
         event.stopPropagation();
     });
+
+    /************************************* 
+     * Search Navbar *
+     ************************************/
+    $('.search-navbar').removeClass('hidden');
+    $('.search-navbar').hide();
+    $('.search').on('click', function () {
+        $('.search-navbar').slideToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.search-navbar').slideUp('slow');
+    });
+
+    $('.search').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.search-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
 });
