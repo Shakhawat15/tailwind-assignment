@@ -3,6 +3,21 @@
 =========================*/
 
 /************************************* 
+ * Dark Theme *
+ ************************************/
+ function toggleMode() {
+    const theme = localStorage.getItem('theme');
+    
+    if (typeof theme === 'string' && theme === 'dark') {
+        localStorage.removeItem('theme');
+        document.documentElement.classList.remove('dark')
+    }else {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark')
+    }
+}
+
+/************************************* 
  * Show And Hide Password *
  ************************************/
 
