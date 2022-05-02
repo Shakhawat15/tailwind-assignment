@@ -535,15 +535,16 @@
                 <div class="col-span-5">
                     <div class="flex flex-wrap gap-5">
                         <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white rounded">
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
                             <div class="relative">
                                 <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button" class="text-xs text-blue-500 bg-blue-100 p-3 rounded">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
                                         <i class="fa-solid fa-users"></i>
                                     </a>
                                 </span>
                                 <h4 class="text-gray-400 mb-2.5">Customers</h4>
-                                <h3 class="text-gray-500 font-bold text-2xl my-5">36,254</h3>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">36,254</h3>
                                 <div class="flex justify-between items-center">
                                     <span class="text-green-500 text-sm">
                                         <i class="fa-solid fa-arrow-up"></i>
@@ -554,15 +555,16 @@
                             </div>
                         </div>
                         <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white rounded">
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
                             <div class="relative">
                                 <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button" class="text-xs text-blue-500 bg-blue-100 p-3 rounded">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
                                         <i class="fa-solid fa-cart-plus"></i>
                                     </a>
                                 </span>
                                 <h4 class="text-gray-400 mb-2.5">Orders</h4>
-                                <h3 class="text-gray-500 font-bold text-2xl my-5">5,543</h3>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">5,543</h3>
                                 <div class="flex justify-between items-center">
                                     <span class="text-red-500 text-sm">
                                         <i class="fa-solid fa-arrow-down"></i>
@@ -573,15 +575,16 @@
                             </div>
                         </div>
                         <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white rounded">
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
                             <div class="relative">
                                 <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button" class="text-xs text-blue-500 bg-blue-100 p-3 rounded">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
                                         <i class="fa-solid fa-dollar-sign"></i>
                                     </a>
                                 </span>
                                 <h4 class="text-gray-400 mb-2.5">Revenue</h4>
-                                <h3 class="text-gray-500 font-bold text-2xl my-5">$6,254</h3>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">$6,254</h3>
                                 <div class="flex justify-between items-center">
                                     <span class="text-red-500 text-sm">
                                         <i class="fa-solid fa-arrow-down"></i>
@@ -592,15 +595,16 @@
                             </div>
                         </div>
                         <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white rounded">
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
                             <div class="relative">
                                 <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button" class="text-xs text-blue-500 bg-blue-100 p-3 rounded">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
                                         <i class="fa-solid fa-chart-line"></i>
                                     </a>
                                 </span>
                                 <h4 class="text-gray-400 mb-2.5">Growth</h4>
-                                <h3 class="text-gray-500 font-bold text-2xl my-5">+ 30.56%</h3>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">+ 30.56%</h3>
                                 <div class="flex justify-between items-center">
                                     <span class="text-green-500 text-sm">
                                         <i class="fa-solid fa-arrow-up"></i>
@@ -612,9 +616,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-7 bg-white p-6 rounded">
+                <div class="col-span-7 bg-white dark:bg-slate-800 p-6 rounded">
                     <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-gray-500 font-bold text-lg uppercase">Projections Vs Actuals</h4>
+                        <h4 class="text-gray-500 dark:text-gray-400 font-bold text-lg uppercase">Projections Vs Actuals
+                        </h4>
                         <div class="inline-block mx-2 lg:mx-3 relative group">
                             <a href="#" role="button"
                                 class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 projection-menu">
@@ -651,7 +656,7 @@
                         </div>
                     </div>
                     <!-- Chart -->
-                    <div id="chart">
+                    <div id="projection-chart">
 
                     </div>
                 </div>
@@ -661,6 +666,53 @@
         <!-- End Projection Section -->
         <!-- End Content Section -->
 
+        <!-- Star Footer Section -->
+        <footer class="border-t mt-2.5">
+            <div class="p-5">
+                <div class="flex justify-between">
+                    <!-- left Menu -->
+                    <div class="mx-2 lg:mx-3">
+                        <p class="text-gray-400 text-base">&copy; 2022 DevsHunt | All Rights Reserved</p>
+                    </div>
+                    <!-- Right Menu -->
+                    <div class="flex justify-center items-center">
+                        <ul class="list-none">
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-xl text-gray-400 hover:text-gray-600 dark:text-gray-200  language">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base mr-2">
+                                            About
+                                        </span>
+                                    </div>
+                                </a>
+                            </li> <!-- End About Options  -->
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-xl text-gray-400 hover:text-gray-600 dark:text-gray-200  language">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base mr-2">
+                                            Support
+                                        </span>
+                                    </div>
+                                </a>
+                            </li> <!-- End About Options  -->
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-xl text-gray-400 hover:text-gray-600 dark:text-gray-200  language">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base">
+                                            Contact
+                                        </span>
+                                    </div>
+                                </a>
+                            </li> <!-- End About Options  -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Section -->
     </main>
     <!-- End Main Section -->
 

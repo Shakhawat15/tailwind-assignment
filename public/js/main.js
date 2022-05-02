@@ -62,7 +62,6 @@ sidebarBtn.addEventListener('click', () => {
 /************************************* 
  * Projection Chart *
  ************************************/
-// var chart = document.querySelector('#chart');
 var options = {
     series: [{
         data: [21, 22, 10, 28, 16, 21, 13, 30, 20, 13, 28, 16]
@@ -101,7 +100,7 @@ var options = {
     }
 };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.querySelector("#projection-chart"), options);
 chart.render();
 
 /*========================= 
