@@ -98,4 +98,13 @@
         transition: all .5s ease;
         width: calc(100% - 260px);
     }
+
+    /* Chart */
+    .apexcharts-zoom-icon, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-reset-icon, .apexcharts-pan-icon, .apexcharts-selection-icon, .apexcharts-menu-icon, .apexcharts-toolbar-custom-icon {
+        display: none;
+    }
+
+    .apexcharts-bar-area {
+        color: red;
+    }
 }

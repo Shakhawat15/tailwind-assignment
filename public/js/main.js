@@ -5,13 +5,13 @@
 /************************************* 
  * Dark Theme *
  ************************************/
- function toggleMode() {
+function toggleMode() {
     const theme = localStorage.getItem('theme');
-    
+
     if (typeof theme === 'string' && theme === 'dark') {
         localStorage.removeItem('theme');
         document.documentElement.classList.remove('dark')
-    }else {
+    } else {
         localStorage.setItem('theme', 'dark');
         document.documentElement.classList.add('dark')
     }
@@ -59,6 +59,51 @@ sidebarBtn.addEventListener('click', () => {
     sidebar.classList.toggle('close');
 });
 
+/************************************* 
+ * Projection Chart *
+ ************************************/
+// var chart = document.querySelector('#chart');
+var options = {
+    series: [{
+        data: [21, 22, 10, 28, 16, 21, 13, 30, 20, 13, 28, 16]
+    }],
+    chart: {
+        type: 'bar',
+        height: 250
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '20%',
+            endingShape: 'rounded'
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+    },
+    xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    },
+    fill: {
+        opacity: 1
+    },
+    tooltip: {
+        y: {
+            formatter: function (val) {
+                return "$ " + val + " thousands"
+            }
+        }
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
 /*========================= 
 ******* jQuery *******
 =========================*/
@@ -100,6 +145,8 @@ $(document).ready(function () {
         $('.notification-navbar').slideUp('slow');
         $('.social-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
+        $('.search-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -125,6 +172,8 @@ $(document).ready(function () {
         $('.setting-navbar').hide('slide');
         $('.social-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
+        $('.search-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -150,6 +199,8 @@ $(document).ready(function () {
         $('.social-navbar').slideUp('slow');
         $('.setting-navbar').hide('slide');
         $('.user-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
+        $('.search-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -175,6 +226,8 @@ $(document).ready(function () {
         $('.setting-navbar').hide('slide');
         $('.language-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
+        $('.search-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -200,6 +253,8 @@ $(document).ready(function () {
         $('.setting-navbar').hide('slide');
         $('.language-navbar').slideUp('slow');
         $('.social-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
+        $('.search-navbar').slideUp('slow');
     });
 
     $(window).click(function () {
@@ -226,6 +281,7 @@ $(document).ready(function () {
         $('.language-navbar').slideUp('slow');
         $('.social-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
+        $('.projection-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -237,6 +293,32 @@ $(document).ready(function () {
     });
 
     $('.search-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * Search Navbar *
+     ************************************/
+    $('.projection-navbar').removeClass('hidden');
+    $('.projection-navbar').hide();
+    $('.projection-menu').on('click', function () {
+        $('.projection-navbar').fadeToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.projection-navbar').fadeOut('slow');
+    });
+
+    $('.projection').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.projection-navbar').on('click', function (event) {
         event.stopPropagation();
     });
 });
