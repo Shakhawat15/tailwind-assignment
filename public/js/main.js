@@ -103,6 +103,49 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#projection-chart"), options);
 chart.render();
 
+/************************************* 
+ * Revenue Chart *
+ ************************************/
+ var options = {
+    series: [{
+        data: [21, 22, 10, 28, 16, 21, 13, 30, 20, 13, 28, 16]
+    }],
+    chart: {
+        type: 'bar',
+        height: 250
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '20%',
+            endingShape: 'rounded'
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+    },
+    xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    },
+    fill: {
+        opacity: 1
+    },
+    tooltip: {
+        y: {
+            formatter: function (val) {
+                return "$ " + val + " thousands"
+            }
+        }
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#revenue-chart"), options);
+chart.render();
 /*========================= 
 ******* jQuery *******
 =========================*/

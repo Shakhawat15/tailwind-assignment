@@ -72,7 +72,7 @@
 
 
     <!-- Start Main Section -->
-    <main class="main-section relative h-screen bg-gray-100 dark:bg-slate-900 top-0 left-[260px]">
+    <main class="main-section relative bg-gray-100 dark:bg-slate-900 top-0 left-[260px]">
         <!-- Start Navbar -->
         <header class="header">
             <nav class="bg-white dark:bg-slate-700 shadow p-2.5 sticky top-0 z-50">
@@ -529,6 +529,7 @@
             </div>
         </nav>
         <!-- End Content Navbar -->
+
         <!-- Start Projection Section -->
         <section class="projection p-2.5">
             <div class="grid grid-cols-12 gap-4 px-5 ml-2 lg:ml-3">
@@ -620,12 +621,13 @@
                     <div class="flex items-center justify-between mb-3">
                         <h4 class="text-gray-500 dark:text-gray-400 font-bold text-lg uppercase">Projections Vs Actuals
                         </h4>
+                        <!-- Projection Menu -->
                         <div class="inline-block mx-2 lg:mx-3 relative group">
                             <a href="#" role="button"
                                 class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 projection-menu">
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </a>
-                            <!-- Search Dropdown Menu  -->
+                            <!-- Projection Dropdown Menu  -->
                             <div
                                 class="projection-navbar z-50 w-[175px] shadow-md bg-white dark:bg-slate-600 absolute -right-2.5 top-[30px] text-left overflow-y-auto rounded py-1 border">
                                 <!-- Item -->
@@ -661,9 +663,158 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <!-- End Projection Section -->
+
+        <!-- Stat Revenue Section -->
+        <section class="projection p-2.5">
+            <div class="grid grid-cols-12 gap-4 px-5 ml-2 lg:ml-3">
+                <div class="col-span-7 bg-white dark:bg-slate-800 p-6 rounded">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-gray-500 dark:text-gray-400 font-bold text-lg uppercase">
+                            Revenue
+                        </h4>
+                        <!-- Revenue Menu -->
+                        <div class="inline-block mx-2 lg:mx-3 relative group">
+                            <a href="#" role="button"
+                                class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 projection-menu">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                            <!-- Revenue Dropdown Menu  -->
+                            <div
+                                class="projection-navbar z-50 w-[175px] shadow-md bg-white dark:bg-slate-600 absolute -right-2.5 top-[30px] text-left overflow-y-auto rounded py-1 border">
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
+                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
+                                        <span class="text-sm font-semibold">Sales Report</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
+                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
+                                        <span class="text-sm font-semibold">Export Report</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
+                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
+                                        <span class="text-sm font-semibold">Profit</span>
+                                    </div>
+                                </a>
+                                <!-- Item -->
+                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
+                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
+                                        <span class="text-sm font-semibold">Action</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="relative">
+                            <h4>Current Week</h4>
+                            <h2>$58,254</h2>
+                            <div class="span"></div>
+                        </div>
+                        <div class="relative">
+                            <h4>Current Week</h4>
+                            <h2>$58,254</h2>
+                            <div class="span"></div>
+                        </div>
+                    </div>
+                    <!-- Chart -->
+                    <div id="revenue-chart">
+
+                    </div>
+                </div>
+                <div class="col-span-5">
+                    <div class="flex flex-wrap gap-5">
+                        <!-- Items -->
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
+                            <div class="relative">
+                                <span class="absolute right-0 top-2.5">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
+                                        <i class="fa-solid fa-users"></i>
+                                    </a>
+                                </span>
+                                <h4 class="text-gray-400 mb-2.5">Customers</h4>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">36,254</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-green-500 text-sm">
+                                        <i class="fa-solid fa-arrow-up"></i>
+                                        5.27%
+                                    </span>
+                                    <p class="text-gray-400 text-sm">Since last month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Items -->
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
+                            <div class="relative">
+                                <span class="absolute right-0 top-2.5">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </a>
+                                </span>
+                                <h4 class="text-gray-400 mb-2.5">Orders</h4>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">5,543</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-red-500 text-sm">
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                        1.08%
+                                    </span>
+                                    <p class="text-gray-400 text-sm">Since last month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Items -->
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
+                            <div class="relative">
+                                <span class="absolute right-0 top-2.5">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
+                                        <i class="fa-solid fa-dollar-sign"></i>
+                                    </a>
+                                </span>
+                                <h4 class="text-gray-400 mb-2.5">Revenue</h4>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">$6,254</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-red-500 text-sm">
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                        7.00%
+                                    </span>
+                                    <p class="text-gray-400 text-sm">Since last month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Items -->
+                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
+                            <div class="relative">
+                                <span class="absolute right-0 top-2.5">
+                                    <a href="#" role="button"
+                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </a>
+                                </span>
+                                <h4 class="text-gray-400 mb-2.5">Growth</h4>
+                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">+ 30.56%</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-green-500 text-sm">
+                                        <i class="fa-solid fa-arrow-up"></i>
+                                        4.87%
+                                    </span>
+                                    <p class="text-gray-400 text-sm">Since last month</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Revenue Section -->
+
         <!-- End Content Section -->
 
         <!-- Star Footer Section -->
