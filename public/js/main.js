@@ -153,23 +153,20 @@ $(document).ready(function () {
     /************************************* 
      * World Map *
      ************************************/
-    var gdpData = {
-        "AF": 16.63,
-        "AL": 11.58,
-        "DZ": 158.97,
-    };
     $('#map').vectorMap({
         map: 'world_mill',
-        series: {
-            regions: [{
-                values: gdpData,
-                scale: ['#C8EEFF', '#0071A4'],
-                normalizeFunction: 'polynomial'
-            }]
+        backgroundColor: 'transparent',
+        zoomOnScroll: false,
+        regionStyle: {
+            initial: {
+                fill: '#E8EEF2',
+                "fill-opacity": 1,
+                stroke: 'none',
+                "stroke-width": 0,
+                "stroke-opacity": 1
+            }
         },
-        onRegionTipShow: function (e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-        }
+
     });
     /************************************* 
      * Add smooth scrolling to all links *
