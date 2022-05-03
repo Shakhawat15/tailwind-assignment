@@ -110,11 +110,11 @@ chart.render();
 
 var options = {
     series: [{
-            name: "Desktops",
+            name: "Current Week",
             data: [20, 50, 35, 55, 45, 60, 45]
         },
         {
-            name: "Laptops",
+            name: "Previous Week",
             data: [0, 44, 25, 65, 35, 70, 55]
         }
     ],

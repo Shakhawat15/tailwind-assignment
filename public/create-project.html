@@ -499,33 +499,44 @@
                 <div class="flex justify-between">
                     <!-- left Menu -->
                     <div class="flex justify-center items-center mx-2 lg:mx-3">
-                        <h4 class="font-bold text-gray-500 dark:text-gray-100 text-lg">Dashboard</h4>
+                        <h4 class="font-bold text-gray-500 dark:text-gray-100 text-lg">Create Project</h4>
                     </div>
                     <!-- Right Menu -->
                     <div class="flex justify-center items-center">
                         <!-- Date Bar -->
-                        <div class="mx-1 relative">
-                            <input type="date" name="" id=""
-                                class="transition rounded w-full min-w-[250px] p-2.5 bg-slate-200 dark:bg-slate-600 dark:text-gray-400 text-sm focus:outline-none"
-                                placeholder="Search... ">
-                            <button
-                                class="absolute top-0 right-0 bg-blue-500 p-2 rounded-r text-white px-4 transition shadow shadow-blue-500/50">
-                                <i class="fa-solid fa-calendar-day"></i>
-                            </button>
-                        </div>
                         <ul class="list-none">
-                            <li class="inline-block mx-1 relative group">
-                                <a href="#" role="button"
-                                    class="text-xs bg-blue-500 hover:bg-blue-700 p-3 px-4 rounded text-white">
-                                    <i class="fa-solid fa-recycle"></i>
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-base text-blue-500 dark:text-gray-200">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base">
+                                            DevsHunt
+                                        </span>
+                                        <i class="fa-solid fa-chevron-right text-xs text-gray-400 ml-5"></i>
+                                    </div>
                                 </a>
-                            </li> <!-- End Renew Options  -->
-                            <li class="inline-block mx-1 relative group">
-                                <a href="#" role="button"
-                                    class="text-xs bg-blue-500 hover:bg-blue-700 p-3 px-4 rounded text-white">
-                                    <i class="fa-solid fa-filter"></i>
+                            </li> <!-- End DevsHunt Options  -->
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-base text-blue-500 dark:text-gray-200">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base">
+                                            Projects
+                                        </span>
+                                        <i class="fa-solid fa-chevron-right text-xs text-gray-400 ml-5"></i>
+                                    </div>
                                 </a>
-                            </li> <!-- End Filter Options  -->
+                            </li> <!-- End Projects Options  -->
+                            <li class="hidden md:inline-block mx-2 lg:mx-3 relative group">
+                                <a href="#"
+                                    class="text-base text-gray-400 dark:text-gray-200">
+                                    <div class="flex justify-center items-center">
+                                        <span class="text-base">
+                                            Create Project
+                                        </span>
+                                    </div>
+                                </a>
+                            </li> <!-- End Create Project Options  -->
                         </ul>
                     </div>
                 </div>
@@ -535,257 +546,13 @@
 
         <!-- Start Projection Section -->
         <section class="projection p-2.5">
-            <div class="grid grid-cols-12 gap-4 px-5 ml-2 lg:ml-3">
-                <div class="col-span-5">
-                    <div class="flex flex-wrap gap-5">
-                        <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
-                            <div class="relative">
-                                <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button"
-                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
-                                        <i class="fa-solid fa-users"></i>
-                                    </a>
-                                </span>
-                                <h4 class="text-gray-400 mb-2.5">Customers</h4>
-                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">36,254</h3>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-green-500 text-sm">
-                                        <i class="fa-solid fa-arrow-up"></i>
-                                        5.27%
-                                    </span>
-                                    <p class="text-gray-400 text-sm">Since last month</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
-                            <div class="relative">
-                                <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button"
-                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </a>
-                                </span>
-                                <h4 class="text-gray-400 mb-2.5">Orders</h4>
-                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">5,543</h3>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-red-500 text-sm">
-                                        <i class="fa-solid fa-arrow-down"></i>
-                                        1.08%
-                                    </span>
-                                    <p class="text-gray-400 text-sm">Since last month</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
-                            <div class="relative">
-                                <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button"
-                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
-                                        <i class="fa-solid fa-dollar-sign"></i>
-                                    </a>
-                                </span>
-                                <h4 class="text-gray-400 mb-2.5">Revenue</h4>
-                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">$6,254</h3>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-red-500 text-sm">
-                                        <i class="fa-solid fa-arrow-down"></i>
-                                        7.00%
-                                    </span>
-                                    <p class="text-gray-400 text-sm">Since last month</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Items -->
-                        <div class="basis-[47%] p-6 bg-white dark:bg-slate-800 rounded">
-                            <div class="relative">
-                                <span class="absolute right-0 top-2.5">
-                                    <a href="#" role="button"
-                                        class="text-xs text-blue-500 bg-blue-100 dark:bg-slate-600 p-3 rounded">
-                                        <i class="fa-solid fa-chart-line"></i>
-                                    </a>
-                                </span>
-                                <h4 class="text-gray-400 mb-2.5">Growth</h4>
-                                <h3 class="text-gray-500 dark:text-gray-300 font-bold text-2xl my-5">+ 30.56%</h3>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-green-500 text-sm">
-                                        <i class="fa-solid fa-arrow-up"></i>
-                                        4.87%
-                                    </span>
-                                    <p class="text-gray-400 text-sm">Since last month</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-7 bg-white dark:bg-slate-800 p-6 rounded">
-                    <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-gray-500 dark:text-gray-400 font-bold text-lg uppercase">Projections Vs Actuals
-                        </h4>
-                        <!-- Projection Menu -->
-                        <div class="inline-block mx-2 lg:mx-3 relative group">
-                            <a href="#" role="button"
-                                class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 projection-menu">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </a>
-                            <!-- Projection Dropdown Menu  -->
-                            <div
-                                class="projection-navbar z-50 w-[175px] shadow-md bg-white dark:bg-slate-600 absolute -right-2.5 top-[30px] text-left overflow-y-auto rounded py-1 border">
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Sales Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Export Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Profit</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Action</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Chart -->
-                    <div id="projection-chart">
-
-                    </div>
+            <div class="px-5 ml-2 lg:ml-3">
+                <div class="">
+                    
                 </div>
             </div>
         </section>
         <!-- End Projection Section -->
-
-        <!-- Stat Revenue Section -->
-        <section class="projection p-2.5">
-            <div class="grid grid-cols-12 gap-4 px-5 ml-2 lg:ml-3">
-                <div class="col-span-7 bg-white dark:bg-slate-800 p-6 rounded relative">
-                    <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-gray-500 dark:text-gray-400 font-bold text-base uppercase">
-                            Revenue
-                        </h4>
-                        <!-- Revenue Menu -->
-                        <div class="inline-block mx-2 lg:mx-3 relative group">
-                            <span
-                                class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 revenue">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </span>
-                            <!-- Revenue Dropdown Menu  -->
-                            <div
-                                class="revenue-navbar z-50 w-[175px] shadow-md bg-white dark:bg-slate-600 absolute -right-2.5 top-[30px] text-left overflow-y-auto rounded py-1 border">
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Sales Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Export Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Profit</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Action</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-around items-center bg-gray-100 rounded p-5">
-                        <div class="relative">
-                            <h4 class="text-gray-400">Current Week</h4>
-                            <h2 class="text-gray-600 text-3xl mt-2.5">$58,254</h2>
-                            <span class="absolute w-2.5 h-2.5 bg-blue-500 rounded-full bottom-2.5 -left-7"></span>
-                        </div>
-                        <div class="relative">
-                            <h4 class="text-gray-400">Previous Week</h4>
-                            <h2 class="text-gray-600 text-3xl mt-2.5"> $69,524</h2>
-                            <span class="absolute w-2.5 h-2.5 bg-green-500 rounded-full bottom-2.5 -left-7"></span>
-                        </div>
-                    </div>
-                    <div class="absolute max-w-[350px] p-5 left-[8%] top-[175px] z-[100]">
-                        <h5 class="text-gray-500 font-bold text-base">Today's Earning: $2,562.30</h5>
-                        <p class="text-gray-400 text-[13px] mt-2 mb-4">Etiam ultricies nisi vel augue. Curabitur ullamcorper
-                            ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
-                        <a href="#"
-                            class="border border-blue-600 text-blue-600 hover:text-white hover:bg-blue-600 text-base  p-1.5 rounded px-3">
-                            View Statements
-                            <i class="fa-solid fa-arrow-right ml-3"></i>
-                        </a>
-                    </div>
-                    <!-- Chart -->
-                    <div id="revenue-chart" class="mt-5">
-
-                    </div>
-                </div>
-                <div class="col-span-5 bg-white p-6 rounded">
-                    <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-gray-500 dark:text-gray-400 font-bold text-base uppercase">
-                            Revenue By Location
-                        </h4>
-                        <!-- Revenue Menu -->
-                        <div class="inline-block mx-2 lg:mx-3 relative group">
-                            <span
-                                class="text-base text-gray-500 dark:text-gray-200 opacity-75 focus:opacity-100 revenue2">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </span>
-                            <!-- Revenue Dropdown Menu  -->
-                            <div
-                                class="revenue2-navbar z-50 w-[175px] shadow-md bg-white dark:bg-slate-600 absolute -right-2.5 top-[30px] text-left overflow-y-auto rounded py-1 border">
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Sales Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Export Report</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Profit</span>
-                                    </div>
-                                </a>
-                                <!-- Item -->
-                                <a href="#" class="block hover:bg-gray-100 dark:hover:bg-gray-500">
-                                    <div class="px-5 py-2 flex items-center text-gray-500 dark:text-gray-300">
-                                        <span class="text-sm font-semibold">Action</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="map" class="w-[336px] h-[224px] m-0 mx-auto"></div>
-                </div>
-            </div>
-        </section>
-        <!-- End Revenue Section -->
 
         <!-- End Content Section -->
 
