@@ -103,54 +103,74 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#projection-chart"), options);
 chart.render();
 
+
 /************************************* 
  * Revenue Chart *
  ************************************/
- var options = {
+
+var options = {
     series: [{
-        data: [21, 22, 10, 28, 16, 21, 13, 30, 20, 13, 28, 16]
-    }],
-    chart: {
-        type: 'bar',
-        height: 250
-    },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '20%',
-            endingShape: 'rounded'
+            name: "Desktops",
+            data: [20, 50, 35, 55, 45, 60, 45]
         },
+        {
+            name: "Laptops",
+            data: [0, 44, 25, 65, 35, 70, 55]
+        }
+    ],
+    chart: {
+        height: 365,
+        type: 'line',
     },
     dataLabels: {
         enabled: false
     },
     stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
+        curve: 'smooth'
+    },
+    grid: {
+        row: {
+            colors: ['transparent', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+        },
     },
     xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    },
-    fill: {
-        opacity: 1
-    },
-    tooltip: {
-        y: {
-            formatter: function (val) {
-                return "$ " + val + " thousands"
-            }
-        }
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     }
 };
 
 var chart = new ApexCharts(document.querySelector("#revenue-chart"), options);
 chart.render();
+
+
 /*========================= 
 ******* jQuery *******
 =========================*/
 
+
 $(document).ready(function () {
+
+    /************************************* 
+     * World Map *
+     ************************************/
+    var gdpData = {
+        "AF": 16.63,
+        "AL": 11.58,
+        "DZ": 158.97,
+    };
+    $('#map').vectorMap({
+        map: 'world_mill',
+        series: {
+            regions: [{
+                values: gdpData,
+                scale: ['#C8EEFF', '#0071A4'],
+                normalizeFunction: 'polynomial'
+            }]
+        },
+        onRegionTipShow: function (e, el, code) {
+            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+        }
+    });
     /************************************* 
      * Add smooth scrolling to all links *
      ************************************/
@@ -189,6 +209,8 @@ $(document).ready(function () {
         $('.user-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
         $('.search-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -216,6 +238,8 @@ $(document).ready(function () {
         $('.user-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
         $('.search-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -243,6 +267,8 @@ $(document).ready(function () {
         $('.user-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
         $('.search-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -270,6 +296,8 @@ $(document).ready(function () {
         $('.user-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
         $('.search-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -297,6 +325,8 @@ $(document).ready(function () {
         $('.social-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
         $('.search-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -324,6 +354,8 @@ $(document).ready(function () {
         $('.social-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
         $('.projection-navbar').fadeOut('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -339,7 +371,7 @@ $(document).ready(function () {
     });
 
     /************************************* 
-     * Search Navbar *
+     * Projection Navbar *
      ************************************/
     $('.projection-navbar').removeClass('hidden');
     $('.projection-navbar').hide();
@@ -350,6 +382,8 @@ $(document).ready(function () {
         $('.language-navbar').slideUp('slow');
         $('.social-navbar').slideUp('slow');
         $('.user-navbar').slideUp('slow');
+        $('.revenue-navbar').fadeOut('slow');
+        $('.revenue2-navbar').fadeOut('slow');
     });
 
     $(window).click(function () {
@@ -361,6 +395,59 @@ $(document).ready(function () {
     });
 
     $('.projection-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * Revenue Navbar *
+     ************************************/
+    $('.revenue-navbar').removeClass('hidden');
+    $('.revenue-navbar').hide();
+    $('.revenue').on('click', function () {
+        $('.revenue-navbar').fadeToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
+        $('.revenue2-navbar').fadeOut('slow');
+    });
+
+    $(window).click(function () {
+        $('.revenue-navbar').fadeOut('slow');
+    });
+
+    $('.revenue').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.revenue-navbar').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    /************************************* 
+     * Revenue Location Navbar *
+     ************************************/
+    $('.revenue2-navbar').removeClass('hidden');
+    $('.revenue2-navbar').hide();
+    $('.revenue2').on('click', function () {
+        $('.revenue2-navbar').fadeToggle('slow');
+        $('.notification-navbar').slideUp('slow');
+        $('.setting-navbar').hide('slide');
+        $('.language-navbar').slideUp('slow');
+        $('.social-navbar').slideUp('slow');
+        $('.user-navbar').slideUp('slow');
+    });
+
+    $(window).click(function () {
+        $('.revenue2-navbar').fadeOut('slow');
+    });
+
+    $('.revenue2').on('click', function (event) {
+        event.stopPropagation();
+    });
+
+    $('.revenue2-navbar').on('click', function (event) {
         event.stopPropagation();
     });
 });

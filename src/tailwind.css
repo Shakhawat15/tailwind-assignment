@@ -104,4 +104,8 @@
         display: none;
     }
 
+    .jvectormap-container {
+        width: 100%;
+    }
+
 }
