@@ -1,3 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    /* Sidebar */
+    .sidebar {
+        z-index: 100;
+        transition: all .5s ease;
+    }
+
+    .sidebar.close {
+        width: 70px;
+    }
+
+    .sidebar.close .nav-links .icon-link {
+        padding-right: 0;
+    }
+
+    .sidebar .nav-links li.showMenu i.arrow {
+        transform: rotate(90deg);
+    }
+
+    .sidebar.close .nav-links i.arrow {
+        display: none;
+    }
+
+    .sidebar .nav-links li .sub-menu a {
+        white-space: nowrap;
+    }
+
+    .sidebar .nav-links li.showMenu .sub-menu {
+        display: block;
+    }
+
+    .sidebar.close .logo-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.close .nav-links li .sub-menu {
+        position: absolute;
+        left: 100%;
+        top: 56px;
+        margin-top: 0;
+        width: calc(260px - 70px);
+        padding: 10px 20px;
+        transition: all .4s ease;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        background: rgb(71, 85, 105);
+    }
+
+
+    .sidebar.close .nav-links li:hover .sub-menu {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sidebar.close .nav-links li:hover .main {
+        background: #3B82F6;
+        padding-right: 0;
+        width: 260px;
+    }
+
+    .sidebar.close .nav-links li:hover a .link-name {
+        padding-left: 10px;
+    }
+
+    .sidebar.close .nav-links li .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.close .nav-links li a .link-name {
+        opacity: 0;
+        /* pointer-events: none; */
+        visibility: hidden;
+    }
+
+    .sidebar.close .nav-links li:hover a .link-name {
+        opacity: 1;
+        /* pointer-events: none; */
+        visibility: visible;
+    }
+
+    .sidebar.close~.main-section {
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+
+
+
+    /* Main Section */
+    .main-section {
+        transition: all .5s ease;
+        width: calc(100% - 260px);
+    }
+
+    /* Chart */
+    .apexcharts-zoom-icon, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-reset-icon, .apexcharts-pan-icon, .apexcharts-selection-icon, .apexcharts-menu-icon, .apexcharts-toolbar-custom-icon {
+        display: none;
+    }
+
+    .jvectormap-container {
+        width: 100%;
+    }
+
+    /* Dropify */
+    .dropify-preview .dropify-infos .dropify-infos-message {
+        font-size: 14px !important;
+    }
+
+}

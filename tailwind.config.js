@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -7,6 +8,9 @@ module.exports = {
       },
       backgroundImage: {
         'main': "url('./../images/bg-pattern-light.svg')",
+      },
+      container: {
+        padding: '1rem',
       },
     },
   },
