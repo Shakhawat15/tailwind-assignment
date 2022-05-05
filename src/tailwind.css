@@ -108,4 +108,9 @@
         width: 100%;
     }
 
+    /* Dropify */
+    .dropify-preview .dropify-infos .dropify-infos-message {
+        font-size: 14px !important;
+    }
+
 }

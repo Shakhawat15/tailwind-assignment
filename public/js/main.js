@@ -447,4 +447,16 @@ $(document).ready(function () {
     $('.revenue2-navbar').on('click', function (event) {
         event.stopPropagation();
     });
+
+    /************************************* 
+     * Dropify *
+     ************************************/
+
+    $('.dropify').dropify();
+
+    /************************************* 
+     * Data Table *
+     ************************************/
+
+    $('#table_id').DataTable();
 });

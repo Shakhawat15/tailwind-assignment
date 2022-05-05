@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Dropify CSS -->
+    <link rel="stylesheet" href="./vendors/dropify/css/dropify.min.css">
+
     <!-- Apex Charts CSS -->
     <link rel="stylesheet" href="./vendors/css/apexcharts.css">
 
@@ -545,15 +548,15 @@
         <section class="projection p-2.5">
             <div class="px-5 ml-2 lg:ml-3">
                 <div class="bg-white dark:bg-slate-800 p-6 rounded">
-                    <form action="#" method="post">
-                        <div class="grid grid-cols-2">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <div class="grid gap-5 grid-cols-2">
                             <div class="col-span-1">
                                 <div class="mb-6">
                                     <label for="name" class="text-sm font-semibold text-gray-500 dark:text-gray-100">
                                         Name
                                     </label>
                                     <input type="text" id="name" placeholder="Enter Project Name"
-                                        class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
+                                        class="rounded dark:bg-slate-600 border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
                                 </div>
                                 <div class="mb-6">
                                     <label for="overview"
@@ -561,41 +564,70 @@
                                         Overview
                                     </label>
                                     <textarea id="overview" placeholder="Enter some brief about project"
-                                        class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full"></textarea>
+                                        class="rounded dark:bg-slate-600 border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full"></textarea>
                                 </div>
                                 <div class="mb-6">
-                                    <label for="start-date" class="text-sm font-semibold text-gray-500 dark:text-gray-100">
+                                    <label for="start-date"
+                                        class="text-sm font-semibold text-gray-500 dark:text-gray-100">
                                         Start Date
                                     </label>
                                     <input type="date" id="start-date"
-                                        class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
+                                        class="rounded dark:bg-slate-600 border py-1.5 text-gray-500 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
                                 </div>
                                 <div class="mb-6">
                                     <label for="budget" class="text-sm font-semibold text-gray-500 dark:text-gray-100">
                                         Budget
                                     </label>
                                     <input type="text" id="budget" placeholder="Enter Project Budget"
-                                        class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
+                                        class="rounded dark:bg-slate-600 border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full">
                                 </div>
                                 <div class="mb-6">
-                                    <label for="team-members" class="text-sm font-semibold text-gray-500 dark:text-gray-100">
+                                    <label for="team-members"
+                                        class="text-sm font-semibold text-gray-500 dark:text-gray-100">
                                         Team Members
                                     </label>
-                                    <select name="" id="team-members" class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full bg-white">
+                                    <select name="" id="team-members"
+                                        class="rounded border py-1.5 px-4 outline-none focus:border-gray-400 mt-2 block w-full bg-white text-gray-500 dark:bg-slate-600">
                                         <option value="" class="bg-gray-100">Select</option>
-                                        <option value="">Team Member 1</option>
-                                        <option value="">Team Member 2</option>
-                                        <option value="">Team Member 3</option>
-                                        <option value="">Team Member 4</option>
-                                        <option value="">Team Member 5</option>
+                                        <option value="">Marry Scott</option>
+                                        <option value="">Holly Campbell</option>
+                                        <option value="">Beatrice Mills</option>
+                                        <option value="">Melinda Gills</option>
+                                        <option value="">Linda Garza</option>
                                     </select>
                                     <div class="flex items-center justify-start mt-5">
-                                        <img src="./images/avatar-4.jpg" alt="" class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
-                                        <img src="./images/avatar-5.jpg" alt="" class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
-                                        <img src="./images/avatar-6.jpg" alt="" class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
-                                        <img src="./images/avatar-7.jpg" alt="" class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
-                                        <img src="./images/avatar-8.jpg" alt="" class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
+                                        <img src="./images/avatar-4.jpg" alt=""
+                                            class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
+                                        <img src="./images/avatar-5.jpg" alt=""
+                                            class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
+                                        <img src="./images/avatar-6.jpg" alt=""
+                                            class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
+                                        <img src="./images/avatar-7.jpg" alt=""
+                                            class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
+                                        <img src="./images/avatar-8.jpg" alt=""
+                                            class="w-6 h-6 rounded-full mr-1.5 cursor-pointer">
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="mb-6">
+                                    <label for="avatar" class="text-sm font-semibold text-gray-500 dark:text-gray-100">
+                                        Avatar
+                                    </label>
+                                    <span class="text-gray-400 text-sm block mb-3">Recommended thumbnail size 800x400 (px).</span>
+                                    <input type="file" id="avatar"
+                                        class="dropify rounded mt-2 w-full dark:bg-slate-600">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="due-date"
+                                        class="text-sm font-semibold text-gray-500 dark:text-gray-100">
+                                        Due Date
+                                    </label>
+                                    <input type="date" id="due-date"
+                                        class="rounded dark:bg-slate-600 border py-1.5 px-4 text-gray-500 outline-none focus:border-gray-400 mt-2 block w-full">
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="bg-blue-700 text-white p-3 px-4 rounded opacity-80 font-semibold hover:opacity-100">Create Project</button>
                                 </div>
                             </div>
                         </div>
@@ -663,6 +695,9 @@
 
     <!-- Apex Charts Js  -->
     <script src="./vendors/js/apexcharts.min.js"></script>
+
+    <!-- Dropify JS -->
+    <script src="./vendors/dropify/js/dropify.min.js"></script>
 
     <!-- jvectormap JS -->
     <script src="./vendors/js/jquery-jvectormap-2.0.5.min.js"></script>

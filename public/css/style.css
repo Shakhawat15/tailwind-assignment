@@ -608,8 +608,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+/* Dropify */
+
+.dropify-preview .dropify-infos .dropify-infos-message {
+  font-size: 14px !important;
+}
+
 .visible {
   visibility: visible;
+}
+
+.\!visible {
+  visibility: visible !important;
 }
 
 .static {
@@ -858,6 +868,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mr-1\.5 {
+  margin-right: 0.375rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -870,24 +892,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mb-9 {
   margin-bottom: 2.25rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
-.mr-1\.5 {
-  margin-right: 0.375rem;
+.mr-4 {
+  margin-right: 1rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -974,6 +992,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.25rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1038,6 +1064,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 80%;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .min-w-\[70px\] {
   min-width: 70px;
 }
@@ -1052,6 +1082,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[350px\] {
   max-width: 350px;
+}
+
+.shrink {
+  flex-shrink: 1;
 }
 
 .basis-\[28\%\] {
@@ -1150,6 +1184,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
@@ -1168,6 +1206,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rounded {
@@ -1259,6 +1303,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
@@ -1282,6 +1331,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-gray-500 {
@@ -1473,6 +1532,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .font-Nunito {
   font-family: Nunito, sans-serif;
 }
@@ -1597,6 +1660,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
+.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -1625,6 +1693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .blur {
@@ -1680,9 +1752,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-red-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-100:hover {
