@@ -121,6 +121,14 @@ var options = {
     chart: {
         height: 365,
         type: 'line',
+        dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+        }
     },
     dataLabels: {
         enabled: false
@@ -166,6 +174,30 @@ $(document).ready(function () {
                 "stroke-opacity": 1
             }
         },
+        markerStyle: {
+            initial: {
+                fill: '#8A93F6',
+                stroke: '#BCC1F7'
+            }
+        },
+        markers: [{
+                latLng: [40.712776, -74.005974],
+                name: 'New York'
+            },
+            {
+                latLng: [37.774929, -122.419418],
+                name: 'San Francisco'
+            },
+            {
+                latLng: [-33.868820, 151.209290],
+                name: 'Sydney'
+            },
+            {
+                latLng: [1.352083, 103.819839],
+                name: 'Singapore'
+            },
+        ]
+
 
     });
     /************************************* 
@@ -496,4 +528,5 @@ $(document).ready(function () {
      ************************************/
 
     $('#table_id').DataTable();
+
 });
