@@ -121,6 +121,14 @@ var options = {
     chart: {
         height: 365,
         type: 'line',
+        dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+        }
     },
     dataLabels: {
         enabled: false
@@ -166,6 +174,30 @@ $(document).ready(function () {
                 "stroke-opacity": 1
             }
         },
+        markerStyle: {
+            initial: {
+                fill: '#8A93F6',
+                stroke: '#BCC1F7'
+            }
+        },
+        markers: [{
+                latLng: [40.712776, -74.005974],
+                name: 'New York'
+            },
+            {
+                latLng: [37.774929, -122.419418],
+                name: 'San Francisco'
+            },
+            {
+                latLng: [-33.868820, 151.209290],
+                name: 'Sydney'
+            },
+            {
+                latLng: [1.352083, 103.819839],
+                name: 'Singapore'
+            },
+        ]
+
 
     });
     /************************************* 
@@ -452,11 +484,49 @@ $(document).ready(function () {
      * Dropify *
      ************************************/
 
+    // Basic
     $('.dropify').dropify();
+
+    // Translated
+    $('.dropify-fr').dropify({
+        messages: {
+            default: 'Glissez-déposez un fichier ici ou cliquez',
+            replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+            remove: 'Supprimer',
+            error: 'Désolé, le fichier trop volumineux'
+        }
+    });
+
+    // Used events
+    var drEvent = $('#input-file-events').dropify();
+
+    drEvent.on('dropify.beforeClear', function (event, element) {
+        return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+    });
+
+    drEvent.on('dropify.afterClear', function (event, element) {
+        alert('File deleted');
+    });
+
+    drEvent.on('dropify.errors', function (event, element) {
+        console.log('Has Errors');
+    });
+
+    var drDestroy = $('#input-file-to-destroy').dropify();
+    drDestroy = drDestroy.data('dropify')
+    $('#toggleDropify').on('click', function (e) {
+        e.preventDefault();
+        if (drDestroy.isDropified()) {
+            drDestroy.destroy();
+        } else {
+            drDestroy.init();
+        }
+    })
 
     /************************************* 
      * Data Table *
      ************************************/
 
     $('#table_id').DataTable();
+
 });

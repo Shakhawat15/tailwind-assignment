@@ -100,7 +100,14 @@
     }
 
     /* Chart */
-    .apexcharts-zoom-icon, .apexcharts-zoomin-icon, .apexcharts-zoomout-icon, .apexcharts-reset-icon, .apexcharts-pan-icon, .apexcharts-selection-icon, .apexcharts-menu-icon, .apexcharts-toolbar-custom-icon {
+    .apexcharts-zoom-icon,
+    .apexcharts-zoomin-icon,
+    .apexcharts-zoomout-icon,
+    .apexcharts-reset-icon,
+    .apexcharts-pan-icon,
+    .apexcharts-selection-icon,
+    .apexcharts-menu-icon,
+    .apexcharts-toolbar-custom-icon {
         display: none;
     }
 
@@ -108,9 +115,39 @@
         width: 100%;
     }
 
-    /* Dropify */
-    .dropify-preview .dropify-infos .dropify-infos-message {
-        font-size: 14px !important;
+    /* Data Tables */
+    table.dataTable tbody tr {
+        background-color: transparent !important;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        color: #fff !important;
+        border: none;
+        background-color: white;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
+        background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+        background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+        background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+        background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+        background: #707af7;
+        border-radius: 50%;
+    }
+
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_wrapper .dataTables_processing,
+    .dataTables_wrapper .dataTables_paginate {
+        color: rgb(156, 163, 175);
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+        padding-top: 1.25em;
+    }
+
+    .dataTables_wrapper .dataTables_info {
+        padding-top: 1.755em;
     }
 
 }
