@@ -1870,6 +1870,10 @@ table.dataTable tbody tr {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:to-gray-300 {
+  --tw-gradient-to: #d1d5db;
+}
+
 .dark .dark\:text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
